@@ -1,0 +1,5 @@
+﻿#alert .modal-body {
+    max-height: 80vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}

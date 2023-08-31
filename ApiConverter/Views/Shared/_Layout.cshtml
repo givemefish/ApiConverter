@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ApiConverter</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/ApiConverter.styles.css" asp-append-version="true" />
+    <link rel="icon" href="~/favicon.ico">
+</head>
+<body>
+    <div class="container-fluid mt-3">
+        @RenderBody()
+    </div>
+    <div id="alert" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">系統訊息</h5>
+                </div>
+                <div class="modal-body"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">確認</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        window.baseUrl = '@ViewBag.BaseUrl';
+        if (window.document.documentMode) {
+            location.href = window.baseUrl + 'Document/BrowserNotSupported';
+        }
+    </script>
+    <script src="~/lib/jquery/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/js/bootstrap.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

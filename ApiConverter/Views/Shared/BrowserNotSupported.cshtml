@@ -1,0 +1,45 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Browser not supported</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.min.css" />
+    <style>
+        body {
+            background-color: #e7e7e7;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+            a:hover {
+                text-decoration: underline;
+            }
+    </style>
+</head>
+<body>
+    <div class="container-fluid d-grid">
+        <div class="p-4 w-50 mx-auto position-absolute top-50 start-50 translate-middle shadow bg-light" style="border: 1px solid red; border-radius: 1rem; background-color: #f8f9fa">
+            <h1 class="lead">不支援的瀏覽器</h1>
+            <hr />
+            <p>
+                請改用以下瀏覽器來瀏覽本網站
+                <ul>
+                    <li><a href="https://www.google.com/intl/zh-TW/chrome/" target="_blank">Google Chrome</a></li>
+                    <li><a href="https://www.microsoft.com/zh-tw/edge" target="_blank">Microsoft Edge</a></li>
+                    <li><a href="https://www.mozilla.org/zh-TW/firefox/new/" target="_blank">Mozilla Firefox</a></li>
+                </ul>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
